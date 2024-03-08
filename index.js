@@ -2,11 +2,13 @@ let array = [];
 let expressionString;
 
 const changeHeading = (value) => {
-  expressionString = "";
-  document.getElementById("heading").value += value;
-  array.push(value);
-  expressionString = array.join("");
-  document.getElementById("heading").innerHTML = expressionString;
+  if (array.length < 23) {
+    expressionString = "";
+    document.getElementById("heading").value += value;
+    array.push(value);
+    expressionString = array.join("");
+    document.getElementById("heading").innerHTML = expressionString;
+  }
 };
 
 const calculate = () => {
@@ -22,6 +24,6 @@ const reset = () => {
 
 const del = () => {
   array.pop();
-  expressionString = array.join(" ");
+  expressionString = array.join("");
   document.getElementById("heading").innerHTML = expressionString;
 };
