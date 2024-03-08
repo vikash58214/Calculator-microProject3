@@ -2,13 +2,11 @@ let array = [];
 let expressionString;
 
 const changeHeading = (value) => {
-  expressionString = " ";
+  expressionString = "";
   document.getElementById("heading").value += value;
   array.push(value);
-  expressionString = array.join(" ");
+  expressionString = array.join("");
   document.getElementById("heading").innerHTML = expressionString;
-  console.log(array);
-  console.log(expressionString);
 };
 
 const calculate = () => {
@@ -26,7 +24,4 @@ const del = () => {
   array.pop();
   expressionString = array.join(" ");
   document.getElementById("heading").innerHTML = expressionString;
-  console.log(array);
-  console.log(expressionString);
-  console.log(typeof expressionString);
 };
